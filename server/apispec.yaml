@@ -16,19 +16,24 @@ paths:
         - grade-scale
       
       responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-        500:
-          description: Internal Server Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
+        "200":
+          $ref: "#/components/responses/GradeResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
 components:
+  responses:
+    GradeResponse:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Grade"
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
   schemas:
     Grade:
       type: object
