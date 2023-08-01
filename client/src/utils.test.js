@@ -136,17 +136,12 @@ const gradeScale = [
 ];
 
 describe("getLetterGrade", () => {
-  test("Returns a valid gradeScale", () => {
-    const validGradeScale = {
-      level: "Level 6",
-      minMark: 0,
-      maxMark: 39,
-      grade: "E",
-    };
-    const result = getLetterGrade(validGradeScale);
-
-    expect(result).toEqual(["level", "minMark", "maxMark", "grade"]);
+  
+  test("Returns a valid grade", () => {
+    expect(getLetterGrade(gradeScale, 30, 'level 6')).toBe("E");
   });
+
+
   test.todo("Test negative scenarios");
 
   test("Throws an error for invalid gradeScale", () => {
