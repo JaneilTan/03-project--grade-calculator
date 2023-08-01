@@ -48,4 +48,4 @@ components:
         message:
           type: string
 tags:
-  - name: grade-scale
+  - name: grade-scale 
