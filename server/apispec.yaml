@@ -43,4 +43,4 @@ components:
         message:
           type: string
 tags:
-  - name: grade-scale
+
