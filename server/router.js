@@ -5,11 +5,8 @@ const db = require("./db");
 router.get("/", async (req, res, next) => {
   try {
     const result = await db.query(
-      `SELECT
-        level
-      FROM grade_scale 
-      ORDER BY
-        id
+      `SELECT level, min_mark, max_mark, grade
+      FROM grade_scale;
       `
     );
     const gradeScale = result.rows;
