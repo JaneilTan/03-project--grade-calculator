@@ -137,12 +137,45 @@ const gradeScale = [
 
 describe("getLetterGrade", () => {
   
-  test("Returns a valid grade", () => {
-    expect(getLetterGrade(gradeScale, 30, 'level 6')).toBe("E");
+  test.each([
+    ["A+", 95, "Level 5"], 
+    ["A", 87, "Level 5"],
+    ["A-", 82, "Level 5"],
+    ["B+", 77, "Level 5"],
+    ["B", 72, "Level 5"],
+    ["B-", 67, "Level 5"],
+    ["C+", 62, "Level 5"],
+    ["C", 57, "Level 5"],
+    ["C-", 52, "Level 5"],
+    ["D", 45, "Level 5"],
+    ["E", 28, "Level 5"],
+    ["A+", 97, "Level 6"], 
+    ["A", 89, "Level 6"],
+    ["A-", 82, "Level 6"],
+    ["B+", 77, "Level 6"],
+    ["B", 72, "Level 6"],
+    ["B-", 67, "Level 6"],
+    ["C+", 62, "Level 6"],
+    ["C", 57, "Level 6"],
+    ["C-", 52, "Level 6"],
+    ["D", 45, "Level 6"],
+    ["E", 25, "Level 6"],
+  ])("The grade calculator should return a grade of X when the mark is X and the level is X", (grade, mark, level) => {
+    const expected = grade;
+    const result = getLetterGrade(gradeScale, mark, level);
+
+    expect(result).toBe(expected);
   });
 
 
-  test.todo("Test negative scenarios");
+  test("Throw an error if no matching grade is found for the provided mark" , () => {
+  
+    const mark = 101;
+    const level = "Level 5"
+    const validGradeScale = gradeScale; 
+    expect(() => getLetterGrade(validGradeScale, mark, level)).toThrow("No matching grade found for the provided mark.")
+
+  });
 
   test("Throws an error for invalid gradeScale", () => {
     const corruptGradeScale = {};
