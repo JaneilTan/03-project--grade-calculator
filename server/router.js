@@ -1,6 +1,6 @@
 const express = require("express");
-const router = express.Router();
 const db = require("./db");
+const router = express.Router();
 
 router.get("/", async (req, res, next) => {
   try {
@@ -14,6 +14,7 @@ router.get("/", async (req, res, next) => {
   } catch (err) {
     next(err);
   }
+
 });
 
 module.exports = router;
