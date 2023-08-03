@@ -177,6 +177,10 @@ describe("getLetterGrade", () => {
 
   });
   
+  test("Throws an error for invalid level provided", () => {
+    const level = "Level 7";
+    expect(() => getLetterGrade(gradeScale, level)).toThrow("Invalid level provided.");
+  });
  
 
   test("Throws an error for invalid gradeScale", () => {
