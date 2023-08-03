@@ -168,14 +168,16 @@ describe("getLetterGrade", () => {
   });
 
 
-  test("Throw an error if no matching grade is found for the provided mark" , () => {
+  test("Throw an error for invalid mark provided" , () => {
   
     const mark = 101;
-    const level = "Level 5"
+    const level = "Level 5";
     const validGradeScale = gradeScale; 
     expect(() => getLetterGrade(validGradeScale, mark, level)).toThrow("No matching grade found for the provided mark.")
 
   });
+  
+ 
 
   test("Throws an error for invalid gradeScale", () => {
     const corruptGradeScale = {};
