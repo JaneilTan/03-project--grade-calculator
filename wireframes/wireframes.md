@@ -2,4 +2,5 @@
 
 <!-- TODO: Add wireframe -->
 
-![img](./GradeWireframe.png)
+![img](./grade.png)
+![img](./negativeScenario.png)
