@@ -22,14 +22,9 @@ const GradeConverterForm = ({ gradeScale }) => {
 
   return (
     <>
-      {errorMessage && <ErrorMessage message={errorMessage} />}
-      {grade && (
-        <p>
-          The grade for mark {mark} at {level} is {grade}.
-        </p>
-      )}
+     
       <form className="mainForm" onSubmit={handleSubmit}>
-        <label htmlFor="level">Level</label>
+        <label className="level" htmlFor="level">Level</label>
         <select
           className="mainFormSelect"
           id="level"
@@ -42,7 +37,7 @@ const GradeConverterForm = ({ gradeScale }) => {
           <option value="Level 5">Level 5</option>
           <option value="Level 6">Level 6</option>
         </select>
-        <label htmlFor="mark">Mark</label>
+        <label className="mark" htmlFor="mark">Mark</label>
         <input
           className="mainFormNumber"
           id="mark"
@@ -55,6 +50,12 @@ const GradeConverterForm = ({ gradeScale }) => {
         />
         <button className="mainFormButton">Get Grade</button>
       </form>
+      {errorMessage && <ErrorMessage message={errorMessage} />}
+      {grade && (
+        <p>
+          The grade for mark {mark} at {level} is {grade}.
+        </p>
+      )}
     </>
   );
 };
