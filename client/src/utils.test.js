@@ -136,9 +136,8 @@ const gradeScale = [
 ];
 
 describe("getLetterGrade", () => {
-  
   test.each([
-    ["A+", 95, "Level 5"], 
+    ["A+", 95, "Level 5"],
     ["A", 87, "Level 5"],
     ["A-", 82, "Level 5"],
     ["B+", 77, "Level 5"],
@@ -149,7 +148,7 @@ describe("getLetterGrade", () => {
     ["C-", 52, "Level 5"],
     ["D", 45, "Level 5"],
     ["E", 28, "Level 5"],
-    ["A+", 97, "Level 6"], 
+    ["A+", 97, "Level 6"],
     ["A", 89, "Level 6"],
     ["A-", 82, "Level 6"],
     ["B+", 77, "Level 6"],
@@ -160,28 +159,31 @@ describe("getLetterGrade", () => {
     ["C-", 52, "Level 6"],
     ["D", 45, "Level 6"],
     ["E", 25, "Level 6"],
-  ])("The grade calculator should return a grade of X when the mark is X and the level is X", (grade, mark, level) => {
-    const expected = grade;
-    const result = getLetterGrade(gradeScale, mark, level);
+  ])(
+    "The grade calculator should return a grade of X when the mark is X and the level is X",
+    (grade, mark, level) => {
+      const expected = grade;
+      const result = getLetterGrade(gradeScale, mark, level);
 
-    expect(result).toBe(expected);
-  });
+      expect(result).toBe(expected);
+    }
+  );
 
-
-  test("Throw an error for invalid mark provided" , () => {
-  
+  test("Throw an error for invalid mark provided", () => {
     const mark = 101;
     const level = "Level 5";
-    const validGradeScale = gradeScale; 
-    expect(() => getLetterGrade(validGradeScale, mark, level)).toThrow("No matching grade found for the provided mark.")
-
+    const validGradeScale = gradeScale;
+    expect(() => getLetterGrade(validGradeScale, mark, level)).toThrow(
+      "No matching grade found for the provided mark."
+    );
   });
-  
+
   test("Throws an error for invalid level provided", () => {
     const level = "Level 7";
-    expect(() => getLetterGrade(gradeScale, level)).toThrow("Invalid level provided.");
+    expect(() => getLetterGrade(gradeScale, level)).toThrow(
+      "Invalid level provided."
+    );
   });
- 
 
   test("Throws an error for invalid gradeScale", () => {
     const corruptGradeScale = {};

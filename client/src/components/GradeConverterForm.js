@@ -22,9 +22,10 @@ const GradeConverterForm = ({ gradeScale }) => {
 
   return (
     <>
-     
       <form className="mainForm" onSubmit={handleSubmit}>
-        <label className="level" htmlFor="level">Level</label>
+        <label className="level" htmlFor="level">
+          Level
+        </label>
         <select
           className="mainFormSelect"
           id="level"
@@ -37,7 +38,9 @@ const GradeConverterForm = ({ gradeScale }) => {
           <option value="Level 5">Level 5</option>
           <option value="Level 6">Level 6</option>
         </select>
-        <label className="mark" htmlFor="mark">Mark</label>
+        <label className="mark" htmlFor="mark">
+          Mark
+        </label>
         <input
           className="mainFormNumber"
           id="mark"
