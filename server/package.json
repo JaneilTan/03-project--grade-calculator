@@ -7,7 +7,8 @@
     "start": "node index.js",
     "start:dev": "nodemon --inspect=0.0.0.0:9229 index.js",
     "lint:js": "eslint .",
-    "prettier:check": "prettier --check '**/*.js'"
+    "prettier:check": "prettier --check '**/*.js'",
+    "prettier:write": "prettier --write '**/*.js'"
   },
   "author": "DI",
   "license": "ISC",
