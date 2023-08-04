@@ -3,3 +3,48 @@
 .mainFormButton {
   font-family: "Righteous", sans-serif;
 }
+.mainForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 3rem;
+}
+label.level,
+label.mark {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+select {
+  margin-bottom: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+button.mainFormButton {
+  display: grid;
+  grid-column: 2 / 3;
+  margin-right: 2rem;
+  width: 70%;
+  border-radius: 0.25rem;
+}
+p,
+h1 {
+  text-align: center;
+}
+.errorMessage {
+  margin-top: 1rem;
+  text-align: center;
+}
+@media (min-width: 64rem) {
+  h1,
+  p {
+    margin-left: 20rem;
+  }
+  label.level,
+  label.mark {
+    text-align: center;
+    margin-left: 15rem;
+  }
+}
