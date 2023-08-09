@@ -14,7 +14,7 @@ paths:
       operationId: get-grade-scale
       tags:
         - grade-scale
-      
+
       responses:
         "200":
           $ref: "#/components/responses/GradeResponse"
@@ -36,7 +36,9 @@ components:
             $ref: "#/components/schemas/Error"
   schemas:
     Grade:
-      type: object
+      type: array
+      items:
+        type: object
       properties:
         level:
           type: string
@@ -48,4 +50,4 @@ components:
         message:
           type: string
 tags:
-  - name: grade-scale 
+  - name: grade-scale
