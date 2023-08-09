@@ -18,7 +18,7 @@ select {
   margin-bottom: 1rem;
 }
 
-input {
+.mainFormNumber {
   margin-bottom: 1rem;
 }
 
@@ -30,7 +30,7 @@ button.mainFormButton {
   border-radius: 0.25rem;
 }
 p,
-h1 {
+.h1Header {
   text-align: center;
 }
 .errorMessage {
