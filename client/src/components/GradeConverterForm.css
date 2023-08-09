@@ -38,7 +38,7 @@ p,
   text-align: center;
 }
 @media (min-width: 64rem) {
-  h1,
+  .h1Header,
   p {
     margin-left: 20rem;
   }
@@ -46,5 +46,14 @@ p,
   label.mark {
     text-align: center;
     margin-left: 15rem;
+  }
+  div.app {
+    justify-content: center;
+    align-content: center;
+  }
+  div#root {
+    margin-left: 40rem;
+    margin-right: 20rem;
+    justify-content: center;
   }
 }
