@@ -2,7 +2,7 @@ const getLetterGrade = (gradeScale, mark, level) => {
   if (!Array.isArray(gradeScale) || !gradeScale.length) {
     throw new Error("Grade scale not provided.");
   }
-  
+
   const validLevel = gradeScale.find((item) => item.level === level);
 
   if (!validLevel || validLevel === undefined) {
@@ -20,7 +20,6 @@ const getLetterGrade = (gradeScale, mark, level) => {
   } else if (mark > 100) {
     throw new Error("No matching grade found for the provided mark.");
   }
-  
 };
 
 module.exports = { getLetterGrade };
