@@ -185,6 +185,12 @@ describe("getLetterGrade", () => {
     );
   });
 
+  test("Throws an error for a level that is undefined", () => {
+    const level = undefined;
+    const mark = 85;
+    expect(() => getLetterGrade(gradeScale, level, mark)).toThrow();
+  });
+
   test("Throws an error for invalid gradeScale", () => {
     const corruptGradeScale = {};
     const mark = 70;
