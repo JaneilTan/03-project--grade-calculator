@@ -37,23 +37,14 @@ p,
   margin-top: 1rem;
   text-align: center;
 }
-@media (min-width: 64rem) {
-  .h1Header,
-  p {
+@media (min-width: 65rem) {
+  .app {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+  #root {
     margin-left: 20rem;
-  }
-  label.level,
-  label.mark {
-    text-align: center;
-    margin-left: 15rem;
-  }
-  div.app {
-    justify-content: center;
-    align-content: center;
-  }
-  div#root {
-    margin-left: 40rem;
     margin-right: 20rem;
-    justify-content: center;
   }
 }
